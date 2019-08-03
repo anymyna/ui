@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="6dp">
+
+            <Button
+                android:id="@+id/btn_tab_top"
+                style="?borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="left|center_vertical"
+                android:onClick="onClickTabLayoutTop"
+                android:textAllCaps="false"
+                android:text="TabLayout 顶部菜单页"
+                />、
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@id/btn_tab_top"
+                android:layout_below="@id/btn_tab_top"
+                android:layout_marginTop="6dp"
+                android:background="@color/gray" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
