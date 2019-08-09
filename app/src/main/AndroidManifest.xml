@@ -12,12 +12,9 @@
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
 
         <activity android:name=".TablayoutRecyclerViewActivity">
             <intent-filter>
@@ -29,6 +26,11 @@
         <activity
             android:name=".TabLayoutTopActivity"
             android:label="TabLayout"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".VectorDemoActivity"
+            android:label="VectorDemoActivity"
             android:screenOrientation="portrait"/>
     </application>
 

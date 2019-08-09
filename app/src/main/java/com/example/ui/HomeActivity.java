@@ -22,4 +22,9 @@ public class HomeActivity extends AppCompatActivity {
     public void onClickTabLayout(View v){
         startActivity(new Intent(this, TablayoutRecyclerViewActivity.class));
     }
+
+
+    public void onClickVectorDemo(View v){
+        startActivity(new Intent(this, VectorDemoActivity.class));
+    }
 }

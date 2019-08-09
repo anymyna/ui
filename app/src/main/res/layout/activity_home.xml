@@ -60,12 +60,41 @@
                     android:onClick="onClickTabLayout"
                     android:textAllCaps="false"
                     android:text="TabLayout Recyclerview 联动"
-                    />、
+                    />
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_alignLeft="@id/btn_tab_recyclerview"
                     android:layout_below="@id/btn_tab_recyclerview"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/vector_demo_layout"
+                android:layout_below="@id/layout_tab_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="6dp">
+
+                <Button
+                    android:id="@+id/btn_vector"
+                    style="?borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="left|center_vertical"
+                    android:onClick="onClickVectorDemo"
+                    android:textAllCaps="false"
+                    android:text="Vector Demo"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@id/btn_vector"
+                    android:layout_below="@id/btn_vector"
                     android:layout_marginTop="6dp"
                     android:background="@color/gray" />
             </RelativeLayout>
