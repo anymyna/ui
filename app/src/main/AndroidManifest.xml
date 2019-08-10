@@ -30,8 +30,15 @@
 
         <activity
             android:name=".VectorDemoActivity"
-            android:label="VectorDemoActivity"
+            android:label="VectorDemo"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".CircleIndicatorActivity"
+            android:label="CircleIndicator"
+            android:screenOrientation="portrait"/>
+
+
     </application>
 
 

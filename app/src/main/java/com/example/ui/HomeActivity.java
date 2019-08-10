@@ -27,4 +27,8 @@ public class HomeActivity extends AppCompatActivity {
     public void onClickVectorDemo(View v){
         startActivity(new Intent(this, VectorDemoActivity.class));
     }
+
+    public void onClickCircleIndicator(View v){
+        startActivity(new Intent(this, CircleIndicatorActivity.class));
+    }
 }
