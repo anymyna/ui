@@ -2,7 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="@dimen/qb_px_150">
 
     <TextView
         android:id="@+id/title"
@@ -18,7 +18,7 @@
 
     <View
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/qb_px_1"
         android:background="#F1F1F1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
