@@ -31,4 +31,9 @@ public class HomeActivity extends AppCompatActivity {
     public void onClickCircleIndicator(View v){
         startActivity(new Intent(this, CircleIndicatorActivity.class));
     }
+
+    public void onClickOkhttp(View v){
+        startActivity(new Intent(this, OkhttpDemoActivity.class));
+    }
+
 }

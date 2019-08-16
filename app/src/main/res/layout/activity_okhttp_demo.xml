@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickGet"
+        android:text="Get" />
+
+    <Button
+        android:id="@+id/btn_post"
+        android:layout_alignLeft="@id/btn_get"
+        android:layout_below="@id/btn_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickPost"
+        android:text="post"
+        />
+
+</RelativeLayout>
