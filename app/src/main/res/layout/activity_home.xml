@@ -85,6 +85,30 @@
                 android:textAllCaps="false"
                 />
 
+            <Button
+                android:id="@+id/constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/btn_bubble"
+                android:layout_below="@id/btn_bubble"
+                android:text="ConstraintLayout"
+                android:textAllCaps="false"
+                />
+
+
+            <Button
+                android:id="@+id/easy_permissions"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/constraint_layout"
+                android:layout_below="@id/constraint_layout"
+                android:text="EasyPermissions"
+                android:textAllCaps="false"
+                />
+
+
         </RelativeLayout>
     </ScrollView>
 

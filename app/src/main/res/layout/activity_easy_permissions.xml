@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/qb_px_16"
+    android:paddingLeft="@dimen/qb_px_16"
+    android:paddingRight="@dimen/qb_px_16"
+    android:paddingTop="@dimen/qb_px_16">
+
+    <Button
+        android:id="@+id/button_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera" />
+
+    <Button
+        android:id="@+id/button_location_and_contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location and Contacts" />
+
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.ui.EasyPermissionsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/easy_permissions_main" />
+
+</LinearLayout>
