@@ -30,3 +30,8 @@ https://blog.csdn.net/anymyna/article/details/99687098
 7.android 自定义气泡布局
 
 https://blog.csdn.net/anymyna/article/details/98122345
+
+
+8.android EasyPermissions 使用教程
+
+https://blog.csdn.net/anymyna/article/details/99700223
