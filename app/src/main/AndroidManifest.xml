@@ -49,6 +49,12 @@
             android:screenOrientation="portrait"/>
 
 
+        <activity
+            android:name=".BubbleLayoutActivity"
+            android:label="BubbleLayout"
+            android:screenOrientation="portrait"/>
+
+
     </application>
 
 

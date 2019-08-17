@@ -11,146 +11,81 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/btn_tab_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                >
-
             <Button
                 android:id="@+id/btn_tab_top"
-                style="?borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:gravity="left|center_vertical"
+                android:layout_height="@dimen/qb_px_40"
+                android:textAllCaps="false"
+                android:text="TabLayout"
+                />
+
+
+            <Button
+                android:id="@+id/btn_tab_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/qb_px_40"
                 android:gravity="left|center_vertical"
-                android:onClick="onClickTabLayoutTop"
-                android:textAllCaps="false"
-                android:text="TabLayout"
-                />、
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/qb_px_1"
                 android:layout_alignLeft="@id/btn_tab_top"
                 android:layout_below="@id/btn_tab_top"
-                android:background="@color/gray" />
-            </RelativeLayout>
+                android:textAllCaps="false"
+                android:text="TabLayout Recyclerview "
+                />
 
 
-            <RelativeLayout
-                android:id="@+id/layout_tab_recyclerview"
-                android:layout_below="@id/btn_tab_1"
+
+            <Button
+                android:id="@+id/btn_vector"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                >
-
-                <Button
-                    android:id="@+id/btn_tab_recyclerview"
-                    style="?borderlessButtonStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/qb_px_40"
-                    android:gravity="left|center_vertical"
-                    android:onClick="onClickTabLayout"
-                    android:textAllCaps="false"
-                    android:text="TabLayout Recyclerview "
-                    />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/qb_px_1"
-                    android:layout_alignLeft="@id/btn_tab_recyclerview"
-                    android:layout_below="@id/btn_tab_recyclerview"
-                    android:background="@color/gray" />
-            </RelativeLayout>
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/btn_tab_recyclerview"
+                android:layout_below="@id/btn_tab_recyclerview"
+                android:textAllCaps="false"
+                android:text="Vector"
+                />
 
 
-
-            <RelativeLayout
-                android:id="@+id/vector_demo_layout"
-                android:layout_below="@id/layout_tab_recyclerview"
+            <Button
+                android:id="@+id/btn_circle_indicator"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                >
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/btn_vector"
+                android:layout_below="@id/btn_vector"
+                android:textAllCaps="false"
+                android:text="CircleIndicator"
+                />
 
-                <Button
-                    android:id="@+id/btn_vector"
-                    style="?borderlessButtonStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/qb_px_40"
-                    android:gravity="left|center_vertical"
-                    android:onClick="onClickVectorDemo"
-                    android:textAllCaps="false"
-                    android:text="Vector"
-                    />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/qb_px_1"
-                    android:layout_alignLeft="@id/btn_vector"
-                    android:layout_below="@id/btn_vector"
-                    android:background="@color/gray" />
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:id="@+id/circle_indicator_layout"
-                android:layout_below="@id/vector_demo_layout"
+            <Button
+                android:id="@+id/btn_okhttp"
+                android:gravity="left|center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                >
+                android:layout_height="@dimen/qb_px_40"
+                android:layout_alignLeft="@id/btn_circle_indicator"
+                android:layout_below="@id/btn_circle_indicator"
+                android:text="Okhttp"
+                android:textAllCaps="false"
+                />
 
-                <Button
-                    android:id="@+id/btn_circle_indicator"
-                    style="?borderlessButtonStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/qb_px_40"
-                    android:gravity="left|center_vertical"
-                    android:onClick="onClickCircleIndicator"
-                    android:textAllCaps="false"
-                    android:text="CircleIndicator"
-                    />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/qb_px_1"
-                    android:layout_alignLeft="@id/btn_circle_indicator"
-                    android:layout_below="@id/btn_circle_indicator"
-                    android:background="@color/gray" />
-            </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/okhttp_layout"
-                android:layout_below="@id/circle_indicator_layout"
+            <Button
+                android:id="@+id/btn_bubble"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                >
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/btn_okhttp"
+                android:layout_below="@id/btn_okhttp"
+                android:text="Bubble"
+                android:textAllCaps="false"
+                />
 
-                <Button
-                    android:id="@+id/btn_okhttp"
-                    style="?borderlessButtonStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/qb_px_40"
-                    android:gravity="left|center_vertical"
-                    android:onClick="onClickOkhttp"
-                    android:text="Okhttp"
-                    android:textAllCaps="false"
-
-                    />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/qb_px_1"
-                    android:layout_alignLeft="@id/btn_okhttp"
-                    android:layout_below="@id/btn_okhttp"
-                    android:background="@color/gray" />
-            </RelativeLayout>
-
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 
 
