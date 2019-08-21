@@ -42,3 +42,9 @@ https://blog.csdn.net/anymyna/article/details/99700223
 https://blog.csdn.net/anymyna/article/details/99700623
 
 
+10.android ParallaxBackLayout 使用教程
+
+https://blog.csdn.net/anymyna/article/details/100003694
+
+
+
