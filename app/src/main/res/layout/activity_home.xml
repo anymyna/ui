@@ -108,6 +108,29 @@
                 android:textAllCaps="false"
                 />
 
+            <Button
+                android:id="@+id/btn_logger"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/easy_permissions"
+                android:layout_below="@id/easy_permissions"
+                android:text="Logger"
+                android:textAllCaps="false"
+                />
+
+
+            <Button
+                android:id="@+id/btn_parallaxback"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/btn_logger"
+                android:layout_below="@id/btn_logger"
+                android:text="ParallaxBack"
+                android:textAllCaps="false"
+                />
+
 
         </RelativeLayout>
     </ScrollView>

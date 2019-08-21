@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.orhanobut.logger.Logger;
+
 import java.util.List;
 
 import pub.devrel.easypermissions.AfterPermissionGranted;
@@ -99,6 +101,7 @@ public class EasyPermissionsActivity extends AppCompatActivity implements EasyPe
                                            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         Log.d(TAG, "onRequestPermissionsResult");
+        Logger.d("onRequestPermissionsResult");
         // EasyPermissions handles the request result.
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);
     }
@@ -106,11 +109,13 @@ public class EasyPermissionsActivity extends AppCompatActivity implements EasyPe
     @Override
     public void onPermissionsGranted(int requestCode, @NonNull List<String> perms) {
         Log.d(TAG, "onPermissionsGranted:" + requestCode + ":" + perms.size());
+        Logger.d("onPermissionsGranted"+ requestCode + ":" + perms.size());
     }
 
     @Override
     public void onPermissionsDenied(int requestCode, @NonNull List<String> perms) {
         Log.d(TAG, "onPermissionsDenied:" + requestCode + ":" + perms.size());
+        Logger.d("onPermissionsDenied"+ requestCode + ":" + perms.size());
 
         //  用户拒绝权限，而且点击不再询问
         // (Optional) Check whether the user denied any permissions and checked "NEVER ASK AGAIN."
@@ -127,7 +132,7 @@ public class EasyPermissionsActivity extends AppCompatActivity implements EasyPe
         if (requestCode == AppSettingsDialog.DEFAULT_SETTINGS_REQ_CODE) {
             String yes = getString(R.string.yes);
             String no = getString(R.string.no);
-            //app设置界面 返回
+            //系统设置app界面 返回
             // Do something after user returned from app settings screen, like showing a Toast.
             Toast.makeText(
                     this,
@@ -140,14 +145,16 @@ public class EasyPermissionsActivity extends AppCompatActivity implements EasyPe
         }
     }
 
-    @Override //dialog时，用户点击接受
+    @Override //   权限请求dialog，用户点击接受
     public void onRationaleAccepted(int requestCode) {
         Log.d(TAG, "onRationaleAccepted:" + requestCode);
+        Logger.d("onRationaleAccepted:" + requestCode);
     }
 
-    @Override //dialog时，用户拒绝按钮
+    @Override //权限请求dialog，用户拒绝按钮
     public void onRationaleDenied(int requestCode) {
         Log.d(TAG, "onRationaleDenied:" + requestCode);
+        Logger.d("onRationaleDenied:" + requestCode);
     }
 
 }
