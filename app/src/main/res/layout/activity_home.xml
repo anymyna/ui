@@ -132,6 +132,18 @@
                 />
 
 
+            <Button
+                android:id="@+id/btn_swipebacklayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/btn_parallaxback"
+                android:layout_below="@id/btn_parallaxback"
+                android:text="SwipeBack"
+                android:textAllCaps="false"
+                />
+
+
         </RelativeLayout>
     </ScrollView>
 

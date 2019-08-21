@@ -5,10 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.orhanobut.logger.AndroidLogAdapter;
-import com.orhanobut.logger.FormatStrategy;
-import com.orhanobut.logger.Logger;
-import com.orhanobut.logger.PrettyFormatStrategy;
+
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -27,7 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.btn_tab_top,R.id.btn_parallaxback, R.id.btn_logger,R.id.btn_tab_recyclerview, R.id.easy_permissions, R.id.constraint_layout,R.id.btn_vector, R.id.btn_circle_indicator, R.id.btn_okhttp, R.id.btn_bubble})
+    @OnClick({R.id.btn_tab_top,R.id.btn_swipebacklayout,R.id.btn_parallaxback, R.id.btn_logger,R.id.btn_tab_recyclerview, R.id.easy_permissions, R.id.constraint_layout,R.id.btn_vector, R.id.btn_circle_indicator, R.id.btn_okhttp, R.id.btn_bubble})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_tab_top:
@@ -59,6 +56,9 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case R.id.btn_parallaxback:
                 startActivity(new Intent(this, ParallaxBackLayoutActivity.class));
+                break;
+            case R.id.btn_swipebacklayout:
+                startActivity(new Intent(this, SwipeBackLayoutActivity.class));
                 break;
 
 
