@@ -14,7 +14,7 @@
         android:id="@+id/desp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="左滑返回" />
+        android:text="@string/slide_hint"/>
 
 
 

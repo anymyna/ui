@@ -12,4 +12,6 @@
         \nSMS: %s
     </string>
 
+    <string name="slide_hint">左侧右滑返回</string>
+
 </resources>
