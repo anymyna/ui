@@ -2,16 +2,22 @@ package com.example.ui;
 
 import android.app.Application;
 
+
+import com.example.ui.dbflow.AppDatabase;
+import com.facebook.stetho.Stetho;
 import com.github.anzewei.parallaxbacklayout.ParallaxHelper;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
+import com.raizlabs.android.dbflow.config.FlowConfig;
+import com.raizlabs.android.dbflow.config.FlowManager;
 
 public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Stetho.initializeWithDefaults(this);
 
         registerActivityLifecycleCallbacks(ParallaxHelper.getInstance());
 
@@ -27,5 +33,9 @@ public class MyApplication extends Application {
         Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy));
 
 //        Logger.addLogAdapter(new AndroidLogAdapter());
+
+
+        FlowManager.init(new FlowConfig.Builder(this).build());
+
     }
 }

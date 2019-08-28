@@ -80,9 +80,10 @@
             android:label="ParallaxBackLayout"
             android:screenOrientation="portrait"/>
 
+
         <activity
-            android:name=".SwipeBackLayoutActivity"
-            android:label="SwipeBackLayout"
+            android:name=".DBFlowDemoActivity"
+            android:label="DBFlow"
             android:screenOrientation="portrait"/>
 
 
