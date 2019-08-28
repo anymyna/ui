@@ -1,8 +1,11 @@
 package com.example.ui;
 
 import android.app.Application;
+import android.database.sqlite.SQLiteDatabase;
 
 
+import com.example.ui.database.greenDao.db.DaoMaster;
+import com.example.ui.database.greenDao.db.DaoSession;
 import com.example.ui.dbflow.AppDatabase;
 import com.facebook.stetho.Stetho;
 import com.github.anzewei.parallaxbacklayout.ParallaxHelper;
@@ -37,5 +40,21 @@ public class MyApplication extends Application {
 
         FlowManager.init(new FlowConfig.Builder(this).build());
 
+        initGreenDao();
+
     }
+
+    private void initGreenDao() {
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "test.db");
+        SQLiteDatabase db = helper.getWritableDatabase();
+        DaoMaster daoMaster = new DaoMaster(db);
+        daoSession = daoMaster.newSession();
+    }
+
+    private DaoSession daoSession;
+    public DaoSession getDaoSession() {
+        return daoSession;
+    }
+
+
 }

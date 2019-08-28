@@ -83,7 +83,7 @@
 
         <activity
             android:name=".DBFlowDemoActivity"
-            android:label="DBFlow"
+            android:label="DB"
             android:screenOrientation="portrait"/>
 
 
