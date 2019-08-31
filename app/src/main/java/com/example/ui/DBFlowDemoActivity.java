@@ -24,11 +24,13 @@ public class DBFlowDemoActivity extends AppCompatActivity {
 
 
         // DBFlow
-        operationDBFlow();
-
-
+        operateBFlow();
 
         // Greendao
+        operateGreendao();
+    }
+
+    private void operateGreendao() {
         //插入数据
         DaoSession daoSession = ((MyApplication) getApplication()).getDaoSession();
         for (int i = 0; i < 10; i++) {
@@ -68,7 +70,7 @@ public class DBFlowDemoActivity extends AppCompatActivity {
         }
     }
 
-    private void operationDBFlow() {
+    private void operateBFlow() {
         //插入数据  id 必须唯一
         User2Model userModel=new User2Model();
         userModel.setName("UserModel");
