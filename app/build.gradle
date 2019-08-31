@@ -54,8 +54,10 @@ dependencies {
     implementation 'org.greenrobot:greendao:3.2.2'
 
 
-
-
+    //DoraemonKit
+    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:1.2.1'
+    releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:1.2.0'
+    //implementation 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.4'
 }
 
 

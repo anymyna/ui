@@ -4,6 +4,7 @@ import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 
 
+import com.didichuxing.doraemonkit.DoraemonKit;
 import com.example.ui.database.greenDao.db.DaoMaster;
 import com.example.ui.database.greenDao.db.DaoSession;
 import com.example.ui.dbflow.AppDatabase;
@@ -24,7 +25,7 @@ public class MyApplication extends Application {
 
         registerActivityLifecycleCallbacks(ParallaxHelper.getInstance());
 
-
+        DoraemonKit.install(this);
         FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
                 //.showThreadInfo(true)  // (Optional) Whether to show thread info or not. Default true
                 // .methodCount(2)         // (Optional) How many method line to show. Default 2
