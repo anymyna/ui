@@ -53,6 +53,8 @@ dependencies {
 
     implementation 'org.greenrobot:greendao:3.2.2'
 
+    implementation 'net.yanzm:loopviewpager:25.0.1'
+
 
     //DoraemonKit
     debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:1.2.1'

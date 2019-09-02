@@ -86,6 +86,11 @@
             android:label="DB"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".LoopViewPagerActivity"
+            android:label="LoopViewPager"
+            android:screenOrientation="portrait"/>
+
 
 
     </application>

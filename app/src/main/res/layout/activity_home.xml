@@ -168,6 +168,17 @@
                 />
 
 
+            <Button
+                android:id="@+id/loopviewpager_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/btn_greendao_layout"
+                android:layout_below="@id/btn_greendao_layout"
+                android:text="loopviewpager"
+                android:textAllCaps="false"
+                />
+
         </RelativeLayout>
     </ScrollView>
 
