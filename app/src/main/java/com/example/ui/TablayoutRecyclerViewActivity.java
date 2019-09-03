@@ -64,7 +64,7 @@ public class TablayoutRecyclerViewActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
 
                 //mManager.scrollToPositionWithOffset(tab.getPosition(), 0);
-
+                //  坑 快速滑动底部，切换tab mRecyclerView 滑动指定位置失效
                 int pos = tab.getPosition();
                 if(pos == 0)
                 {
@@ -91,7 +91,7 @@ public class TablayoutRecyclerViewActivity extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
+                //  坑 快速滑动底部，切换tab 失败
             }
         });
 
