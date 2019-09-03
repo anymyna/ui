@@ -60,6 +60,10 @@ https://blog.csdn.net/anymyna/article/details/100129253
 
 https://blog.csdn.net/anymyna/article/details/100178518
 
+14.Android LoopViewPager 使用教程
+
+https://blog.csdn.net/anymyna/article/details/100415583
+
 
 
 
