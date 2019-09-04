@@ -92,6 +92,10 @@
             android:screenOrientation="portrait"/>
 
 
+        <activity
+            android:name=".PhotoViewActivity"
+            android:label="PhotoView"
+            android:screenOrientation="portrait"/>
 
     </application>
 

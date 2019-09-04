@@ -20,14 +20,16 @@ buildscript {
 
 allprojects {
     repositories {
+        maven {
+            url 'https://github.com/yanzm/LoopViewPager/raw/master/maven-repo'
+        }
+
         maven{ url 'http://maven.aliyun.com/repository/google'}
         maven{ url 'http://maven.aliyun.com/repository/jcenter'}
         google()
         jcenter()
         maven { url "https://www.jitpack.io" }
-        maven {
-            url 'https://github.com/yanzm/LoopViewPager/raw/master/maven-repo'
-        }
+
         
     }
 }
