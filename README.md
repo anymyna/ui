@@ -64,6 +64,10 @@ https://blog.csdn.net/anymyna/article/details/100178518
 
 https://blog.csdn.net/anymyna/article/details/100415583
 
+15.Android PhotoView 使用教程
+
+https://blog.csdn.net/anymyna/article/details/100547498
+
 
 
 
