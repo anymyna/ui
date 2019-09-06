@@ -25,7 +25,7 @@ public class MyApplication extends Application {
 
         registerActivityLifecycleCallbacks(ParallaxHelper.getInstance());
 
-        DoraemonKit.install(this);
+        //DoraemonKit.install(this);
         FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
                 //.showThreadInfo(true)  // (Optional) Whether to show thread info or not. Default true
                 // .methodCount(2)         // (Optional) How many method line to show. Default 2
