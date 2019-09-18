@@ -69,5 +69,10 @@ https://blog.csdn.net/anymyna/article/details/100415583
 https://blog.csdn.net/anymyna/article/details/100547498
 
 
+16.Android MVP代码生成插件MVPHelper使用教程
+
+https://blog.csdn.net/anymyna/article/details/101002665
+
+
 
 
