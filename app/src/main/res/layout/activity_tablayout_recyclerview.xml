@@ -11,10 +11,11 @@
         android:layout_height="@dimen/qb_px_48"
         android:background="@color/blue"
         app:tabIndicatorColor="@color/colorAccent"
-        app:tabMode="fixed"
         app:tabSelectedTextColor="@color/colorPrimary"
         app:tabTextColor="@android:color/black"
         app:tabIndicatorHeight="@dimen/qb_px_3"
+        app:tabGravity="center"
+        app:tabMode="fixed"
 
         />
 

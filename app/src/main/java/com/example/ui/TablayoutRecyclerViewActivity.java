@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 public class TablayoutRecyclerViewActivity extends AppCompatActivity {
@@ -22,6 +23,7 @@ public class TablayoutRecyclerViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_tablayout_recyclerview);
 
         mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
@@ -98,7 +100,7 @@ public class TablayoutRecyclerViewActivity extends AppCompatActivity {
     }
 
     private void initTab() {
-        mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        //mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         mTabLayout.addTab(mTabLayout.newTab().setText(titles[0]).setTag(Constants.TAG_ZERO));
         mTabLayout.addTab(mTabLayout.newTab().setText(titles[1]).setTag(Constants.TAG_ONE));
         mTabLayout.addTab(mTabLayout.newTab().setText(titles[2]).setTag(Constants.TAG_TWO));
