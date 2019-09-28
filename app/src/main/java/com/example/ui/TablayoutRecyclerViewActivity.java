@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TablayoutRecyclerViewActivity extends AppCompatActivity {
 
@@ -94,6 +95,15 @@ public class TablayoutRecyclerViewActivity extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
                 //  坑 快速滑动底部，切换tab 失败
+                //  mLinearSnapHelper.attachToRecyclerView(mRecyclerView);  // item滑动居中
+                //  ru.noties:scrollable   scrollableLayout.animateScroll(1000).setDuration(250L).start();  Animate Scroll // collapsed  header
+
+                //关于Android7.x系统Toast显示异常BadTokenException解决方案
+                //调用Toast的show()方法后，将主线程阻塞5s，即可稳定复现这个异常
+                //Toast.makeToast(context, "123", LENGTH_LONG).show();
+                //Thread.sleep(5*1000);
+                //出现这个异常的原因就是Toast显示时会有一个Token，这个Token是由WindowManager创建并管理的，重点是这个Token有时间限制，当超过了一个Toast的显示时长（LENGTH_LONG）后，会把这个Token置为无效。所以把Toast延迟显示后，使用的Token就已经过期了。
+
             }
         });
 

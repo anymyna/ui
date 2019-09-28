@@ -1,18 +1,33 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    ext.booster_version = '0.22.0'
     repositories {
         maven{ url 'http://maven.aliyun.com/repository/google'}
         maven{ url 'http://maven.aliyun.com/repository/jcenter'}
-
+        mavenCentral()
         google()
         jcenter()
+        maven { url 'https://oss.sonatype.org/content/repositories/public' }
         
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
-        
+        classpath "com.didiglobal.booster:booster-gradle-plugin:$booster_version"
+        classpath "com.didiglobal.booster:booster-task-all:$booster_version"
+        classpath "com.didiglobal.booster:booster-transform-all:$booster_version"
+
+//        classpath files('lib/transformer-with-asm.jar')
+
+        classpath files('lib/booster-transform-javassist-0.22.0.jar')
+        classpath files('lib/transformer-with-javassist.jar')
+        classpath files('lib/javassist-3.25.0-GA.jar')
+        ///classpath "com.didiglobal.booster:booster-task-list-permission:$booster_version"
+//        classpath "com.didiglobal.booster:booster-task-check-snapshot:$booster_version"
+//        classpath "com.didiglobal.booster:booster-task-list-shared-library:$booster_version"
+
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -26,9 +41,11 @@ allprojects {
 
         maven{ url 'http://maven.aliyun.com/repository/google'}
         maven{ url 'http://maven.aliyun.com/repository/jcenter'}
+        mavenCentral()
         google()
         jcenter()
         maven { url "https://www.jitpack.io" }
+        maven { url 'https://oss.sonatype.org/content/repositories/public' }
 
         
     }

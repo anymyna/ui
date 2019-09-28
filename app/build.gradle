@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.didiglobal.booster'
 
 android {
     compileSdkVersion 28
@@ -63,6 +64,7 @@ dependencies {
 
 
     implementation 'com.github.chrisbanes:PhotoView:1.2.6'
+
 }
 
 

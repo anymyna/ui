@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity implements TestContract.View
 
     @Override
     public void onClick(View view) {
-        Log.d("duck"," onClick ");
         testPresenter.jump();
     }
 
