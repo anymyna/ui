@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'com.didiglobal.booster'
+apply plugin: 'AndResGuard'
+
+//apply from: 'and_res_guard.gradle'
 
 android {
     compileSdkVersion 28
@@ -65,6 +68,8 @@ dependencies {
 
     implementation 'com.github.chrisbanes:PhotoView:1.2.6'
 
+
+
 }
 
 
@@ -75,4 +80,48 @@ greendao {
     //targetGenDir 'src.main.java'//设置DaoMaster、DaoSession、Dao目录,请注意，这里路径用.不要用/
     generateTests false //设置为true以自动生成单元测试。
     targetGenDirTests 'src/main/java' //应存储生成的单元测试的基本目录。默认为 src / androidTest / java。
+}
+
+andResGuard {
+    mappingFile = null
+    use7zip = true
+    useSign = true
+    keepRoot = false
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+            "resources.arsc"
+    ]
+    whiteList = [
+            // your icon
+            "R.drawable.icon",
+            // for fabric
+            "R.string.com.crashlytics.*",
+            // for umeng update
+            "R.string.tb_*",
+            "R.layout.tb_*",
+            "R.drawable.tb_*",
+            "R.drawable.u1*",
+            "R.drawable.u2*",
+            "R.color.tb_*",
+            // umeng share for sina
+            "R.drawable.sina*",
+            // for google-services.json
+            "R.string.google_app_id",
+            "R.string.gcm_defaultSenderId",
+            "R.string.default_web_client_id",
+            "R.string.ga_trackingId",
+            "R.string.firebase_database_url",
+            "R.string.google_api_key",
+            "R.string.google_crash_reporting_api_key",
+
+
+    ]
+
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.10'
+        //path = "/usr/local/bin/7za"
+    }
 }
