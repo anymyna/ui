@@ -72,6 +72,7 @@ dependencies {
 
 
     implementation 'com.github.chrisbanes:PhotoView:1.2.6'
+    implementation 'com.zhy:okhttputils:2.6.2'
 
 
 

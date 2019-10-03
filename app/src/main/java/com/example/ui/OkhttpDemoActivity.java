@@ -1,32 +1,57 @@
 package com.example.ui;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
+
 import com.facebook.stetho.okhttp3.StethoInterceptor;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.BitmapCallback;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
-import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 
 
 public class OkhttpDemoActivity extends AppCompatActivity {
     final OkHttpClient client = new OkHttpClient();
     String Tag = "OkhttpDemoActivity";
+    @Bind(R.id.img)
+    ImageView img;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_okhttp_demo);
         ButterKnife.bind(this);
+
+        OkHttpUtils
+                .get()//
+                .url("http://images.csdn.net/20150817/1.jpg")//
+                .build()//
+                .execute(new BitmapCallback()
+                {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        Log.i(Tag, "onError ");
+                    }
+                    @Override
+                    public void onResponse(Bitmap response, int id) {
+                        Log.i(Tag, "onResponse ");
+                        img.setImageBitmap(response);
+                    }
+                });
     }
 
 
@@ -52,7 +77,6 @@ public class OkhttpDemoActivity extends AppCompatActivity {
 //        MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 //        RequestBody body = RequestBody.create(JSON, json);
         //Request request = new Request.Builder().url(url).post(body).build();
-
 
 
         Call call = okHttpClient.newCall(request);
