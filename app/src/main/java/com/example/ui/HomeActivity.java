@@ -3,9 +3,12 @@ package com.example.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.orhanobut.logger.Logger;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -30,7 +33,8 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(this, TablayoutRecyclerViewActivity.class));
                 break;
             case R.id.btn_vector:
-                startActivity(new Intent(this, VectorDemoActivity.class));
+                //startActivity(new Intent(this, VectorDemoActivity.class));
+                ARouter.getInstance().build("/test/activity").navigation();
                 break;
             case R.id.btn_circle_indicator:
                 startActivity(new Intent(this, CircleIndicatorActivity.class));

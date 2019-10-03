@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 
+
+@Route(path = "/test/activity")
 public class VectorDemoActivity extends AppCompatActivity {
 
     @Override

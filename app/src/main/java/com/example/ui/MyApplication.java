@@ -4,6 +4,7 @@ import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.didichuxing.doraemonkit.DoraemonKit;
 import com.example.ui.database.greenDao.db.DaoMaster;
 import com.example.ui.database.greenDao.db.DaoSession;
@@ -42,6 +43,7 @@ public class MyApplication extends Application {
         FlowManager.init(new FlowConfig.Builder(this).build());
 
         initGreenDao();
+        ARouter.init(this);
 
     }
 
