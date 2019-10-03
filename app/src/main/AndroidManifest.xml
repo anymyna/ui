@@ -45,6 +45,7 @@
             android:label="VectorDemo"
             android:screenOrientation="portrait"/>
 
+
         <activity
             android:name=".CircleIndicatorActivity"
             android:label="CircleIndicator"
@@ -95,6 +96,17 @@
         <activity
             android:name=".PhotoViewActivity"
             android:label="PhotoView"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name=".retrofit.RetrofitGetRequestActivity"
+            android:label="Retrofit"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".retrofit.RetrofitPostRequestActivity"
+            android:label="Retrofit"
             android:screenOrientation="portrait"/>
 
     </application>

@@ -179,8 +179,6 @@
                 android:textAllCaps="false"
                 />
 
-
-
             <Button
                 android:id="@+id/photoview_layout"
                 android:layout_width="match_parent"
@@ -189,6 +187,29 @@
                 android:layout_alignLeft="@id/loopviewpager_layout"
                 android:layout_below="@id/loopviewpager_layout"
                 android:text="photoview"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/retrofit_get_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/photoview_layout"
+                android:layout_below="@id/photoview_layout"
+                android:text="retrofit_get"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/retrofit_post_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/retrofit_get_layout"
+                android:layout_below="@id/retrofit_get_layout"
+                android:text="retrofit"
                 android:textAllCaps="false"
                 />
 
