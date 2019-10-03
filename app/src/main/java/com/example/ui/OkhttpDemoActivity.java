@@ -2,6 +2,7 @@ package com.example.ui;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import hugo.weaving.DebugLog;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
@@ -99,6 +101,7 @@ public class OkhttpDemoActivity extends AppCompatActivity {
     public void onClickGet(View v) {
         Log.i(Tag, "onClickGet");
 
+        getName("Jake","Wharton");
 
         final Request request = new Request.Builder()
                 .get()
@@ -124,6 +127,13 @@ public class OkhttpDemoActivity extends AppCompatActivity {
         }).start();
 
 
+    }
+
+
+    @DebugLog
+    public String getName(String first, String last) {
+        SystemClock.sleep(15); // Don't ever really do this!
+        return first + " " + last;
     }
 
 

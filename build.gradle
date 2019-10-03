@@ -30,7 +30,7 @@ buildscript {
 
 
         classpath 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.17'
-
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
 
 
         // NOTE: Do not place your application dependencies here; they belong
