@@ -7,14 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-
+import com.example.ui.aspect.DoubleClickAnnotation;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.BitmapCallback;
-
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import hugo.weaving.DebugLog;
@@ -57,6 +55,9 @@ public class OkhttpDemoActivity extends AppCompatActivity {
     }
 
 
+
+
+
     public void onClickPost(View v) {
 
         Log.i(Tag, "onClickPost");
@@ -67,19 +68,12 @@ public class OkhttpDemoActivity extends AppCompatActivity {
                 .writeTimeout(10, TimeUnit.SECONDS)
                 .build();
         FormBody formBody = new FormBody.Builder()
-                //.add("name", name).add("pwd", pwd)
                 .build();
 
         Request request = new Request.Builder()
                 .post(formBody)
                 .url("http://httpbin.org/post")
                 .build();
-
-//        String json = "";
-//        MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-//        RequestBody body = RequestBody.create(JSON, json);
-        //Request request = new Request.Builder().url(url).post(body).build();
-
 
         Call call = okHttpClient.newCall(request);
         call.enqueue(new Callback() {
@@ -98,6 +92,7 @@ public class OkhttpDemoActivity extends AppCompatActivity {
 
     }
 
+    @DoubleClickAnnotation
     public void onClickGet(View v) {
         Log.i(Tag, "onClickGet");
 
