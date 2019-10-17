@@ -10,7 +10,9 @@ import retrofit2.http.GET;
 // URL模板   http://fy.iciba.com/ajax.php
 
 // URL实例  http://fy.iciba.com/ajax.php?a=fy&f=auto&t=auto&w=hello%20world
-
+//步骤1：添加Retrofit库的依赖
+//步骤2：创建 接收服务器返回数据 的类
+//步骤3：创建 用于描述网络请求 的接
 public interface GetRequest_Interface {
     @GET("ajax.php?a=fy&f=auto&t=auto&w=hello%20world")
     Call<Translation> getCall();

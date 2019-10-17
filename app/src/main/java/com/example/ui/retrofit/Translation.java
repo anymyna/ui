@@ -5,6 +5,7 @@ import androidx.annotation.NonNull;
 /**
  * Created by Carson_Ho on 17/3/20.
  */
+
 public class Translation {
 
     private int status;

@@ -1,1 +1,2 @@
 include ':app',':mvp'
+include ':ijkplayer-java', ':ijkplayer-example', ':ijkplayer-exo'

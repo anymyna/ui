@@ -40,6 +40,7 @@ public class RetrofitGetRequestActivity extends AppCompatActivity {
         //步骤6:发送网络请求(异步)
         call.enqueue(new Callback<Translation>() {
             //请求成功时候的回调
+            //步骤7：处理返回数据
             @Override
             public void onResponse(Call<Translation> call, Response<Translation> response) {
                 //请求处理,输出结果
