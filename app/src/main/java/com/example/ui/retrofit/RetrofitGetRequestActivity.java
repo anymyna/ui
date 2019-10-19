@@ -32,7 +32,7 @@ public class RetrofitGetRequestActivity extends AppCompatActivity {
                 .build();
 
         // 步骤5:创建 网络请求接口 的实例
-        GetRequest_Interface request = retrofit.create(GetRequest_Interface.class);
+        GetRequestInterface request = retrofit.create(GetRequestInterface.class);
 
         //对 发送请求 进行封装
         Call<Translation> call = request.getCall();

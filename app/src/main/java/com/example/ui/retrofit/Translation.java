@@ -10,8 +10,8 @@ public class Translation {
 
     private int status;
 
-    private content content;
-    private static class content {
+    private Content content;
+    private static class Content {
         private String from;
         private String to;
         private String vendor;
@@ -37,6 +37,6 @@ public class Translation {
     @NonNull
     @Override
     public String toString() {
-        return super.toString() + "  status =  " +status +  " ;content.from = "+ content.from + " ; content.to = "+content.to + " ; content.vendor ; "+ content.vendor +" ; content.out "+content.out + ";content.errNo  "+ content.errNo;
+        return super.toString() + "  status =  " +status +  " ;Content.from = "+ content.from + " ; Content.to = "+content.to + " ; Content.vendor ; "+ content.vendor +" ; Content.out "+content.out + ";Content.errNo  "+ content.errNo;
     }
 }

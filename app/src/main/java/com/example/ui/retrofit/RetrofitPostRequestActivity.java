@@ -37,7 +37,7 @@ public class RetrofitPostRequestActivity extends AppCompatActivity {
                 .build();
 
         // 步骤5:创建 网络请求接口 的实例
-        PostRequest_Interface request = retrofit.create(PostRequest_Interface.class);
+        PostRequestInterface request = retrofit.create(PostRequestInterface.class);
 
         //对 发送请求 进行封装(设置需要翻译的内容)
         Call<Translation1> call = request.getCall("I love you");

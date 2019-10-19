@@ -12,7 +12,7 @@ import retrofit2.http.POST;
 // URL http://fanyi.youdao.com/translate
 // URL实例 http://fanyi.youdao.com/translate?doctype=json&jsonversion=&type=&keyfrom=&model=&mid=&imei=&vendor=&screen=&ssid=&network=&abtest=
 
-public interface PostRequest_Interface {
+public interface PostRequestInterface {
 
 
     @POST("translate?doctype=json&jsonversion=&type=&keyfrom=&model=&mid=&imei=&vendor=&screen=&ssid=&network=&abtest=")

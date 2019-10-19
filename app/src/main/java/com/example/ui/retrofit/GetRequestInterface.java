@@ -13,7 +13,7 @@ import retrofit2.http.GET;
 //步骤1：添加Retrofit库的依赖
 //步骤2：创建 接收服务器返回数据 的类
 //步骤3：创建 用于描述网络请求 的接
-public interface GetRequest_Interface {
+public interface GetRequestInterface {
     @GET("ajax.php?a=fy&f=auto&t=auto&w=hello%20world")
     Call<Translation> getCall();
     // 注解里传入 网络请求 的部分URL地址
