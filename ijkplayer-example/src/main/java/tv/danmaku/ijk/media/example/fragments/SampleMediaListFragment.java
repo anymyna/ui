@@ -68,6 +68,9 @@ public class SampleMediaListFragment extends Fragment {
             }
         });
 
+        mAdapter.addItem("http://192.168.0.104/%E9%92%A2%E7%9A%84%E7%90%B4.mkv", "钢的琴");
+        mAdapter.addItem("http://192.168.0.104/%E6%81%90%E6%80%96%E6%B8%B8%E8%BD%AE.mp4", "恐怖游轮");// 播放正常
+        mAdapter.addItem("http://192.168.0.104/%E5%9B%9B%E4%B8%AA%E6%98%A5%E5%A4%A9.Four.Springs.2017.HD1080P.X264.AAC.Mandarin.CHS-ENG.Mp4Ba.mp4", "四个春天");// -10000 错误
         mAdapter.addItem("http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8", "bipbop basic master playlist");
         mAdapter.addItem("http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8", "bipbop basic 400x300 @ 232 kbps");
         mAdapter.addItem("http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/gear2/prog_index.m3u8", "bipbop basic 640x480 @ 650 kbps");

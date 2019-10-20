@@ -73,6 +73,7 @@ public class VideoActivity extends AppCompatActivity implements TracksFragment.I
 
     public static void intentTo(Context context, String videoPath, String videoTitle) {
         context.startActivity(newIntent(context, videoPath, videoTitle));
+        Log.e(TAG,"intentTo");
     }
 
     @Override
@@ -132,14 +133,14 @@ public class VideoActivity extends AppCompatActivity implements TracksFragment.I
         mRightDrawer = (ViewGroup) findViewById(R.id.right_drawer);
 
         mDrawerLayout.setScrimColor(Color.TRANSPARENT);
-
+        Log.e(TAG,"init player");
         // init player
         IjkMediaPlayer.loadLibrariesOnce(null);
         IjkMediaPlayer.native_profileBegin("libijkplayer.so");
 
         mVideoView = (IjkVideoView) findViewById(R.id.video_view);
         mVideoView.setMediaController(mMediaController);
-        mVideoView.setHudView(mHudView);
+        mVideoView.setHudView(mHudView);  //
         // prefer mVideoPath
         if (mVideoPath != null)
             mVideoView.setVideoPath(mVideoPath);

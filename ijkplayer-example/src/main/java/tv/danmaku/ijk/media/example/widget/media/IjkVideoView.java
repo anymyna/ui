@@ -262,6 +262,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
      * @param uri the URI of the video.
      */
     public void setVideoURI(Uri uri) {
+        Log.e(TAG,"isetVideoURI");
         setVideoURI(uri, null);
     }
 
@@ -303,6 +304,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
 
     @TargetApi(Build.VERSION_CODES.M)
     private void openVideo() {
+        Log.e(TAG,"openVideo");
         if (mUri == null || mSurfaceHolder == null) {
             // not ready for playback just yet, will try again later
             return;
@@ -315,6 +317,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
         am.requestAudioFocus(null, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
 
         try {
+            Log.e(TAG,"createPlayer");
             mMediaPlayer = createPlayer(mSettings.getPlayer());
 
             // TODO: create SubtitleController in MediaPlayer, but we need
@@ -410,6 +413,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
 
     IMediaPlayer.OnPreparedListener mPreparedListener = new IMediaPlayer.OnPreparedListener() {
         public void onPrepared(IMediaPlayer mp) {
+            Log.d(TAG, "onPrepared ");
             mPrepareEndTime = System.currentTimeMillis();
             mHudViewHolder.updateLoadCost(mPrepareEndTime - mPrepareStartTime);
             mCurrentState = STATE_PREPARED;
@@ -593,6 +597,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
         @Override
         public void onSeekComplete(IMediaPlayer mp) {
             mSeekEndTime = System.currentTimeMillis();
+            Log.d(TAG, "onSeekComplete: mSeekEndTime "+mSeekEndTime);
             mHudViewHolder.updateSeekCost(mSeekEndTime - mSeekStartTime);
         }
     };
@@ -791,6 +796,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
     }
 
     private void toggleMediaControlsVisiblity() {
+        Log.e(TAG, "toggleMediaControlsVisiblity "+mMediaController.isShowing());
         if (mMediaController.isShowing()) {
             mMediaController.hide();
         } else {
@@ -845,6 +851,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
 
     @Override
     public void seekTo(int msec) {
+        Log.d(TAG, "seekTo ");
         if (isInPlaybackState()) {
             mSeekStartTime = System.currentTimeMillis();
             mMediaPlayer.seekTo(msec);
@@ -1018,7 +1025,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
 
     public IMediaPlayer createPlayer(int playerType) {
         IMediaPlayer mediaPlayer = null;
-
+        Log.e(TAG,"createPlayer playerType "+playerType);
         switch (playerType) {
             case Settings.PV_PLAYER__IjkExoMediaPlayer: {
                 IjkExoMediaPlayer IjkExoMediaPlayer = new IjkExoMediaPlayer(mAppContext);
@@ -1036,9 +1043,11 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
                 if (mUri != null) {
                     ijkMediaPlayer = new IjkMediaPlayer();
                     ijkMediaPlayer.native_setLogLevel(IjkMediaPlayer.IJK_LOG_DEBUG);
-
+                    Log.e(TAG,"ijkMediaPlayer  getUsingMediaCodec "+mSettings.getUsingMediaCodec());
                     if (mSettings.getUsingMediaCodec()) {
-                        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 1);
+                        //ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 1);//1 开启mediacodec硬解
+                        Log.e(TAG,"ijkMediaPlayer  MediaCodec");
+                        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 0);//关闭mediacodec硬解，使用软解
                         if (mSettings.getUsingMediaCodecAutoRotate()) {
                             ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-auto-rotate", 1);
                         } else {

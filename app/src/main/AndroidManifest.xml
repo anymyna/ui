@@ -110,8 +110,13 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".VideoViewActivity"
-            android:label="Retrofit"
+            android:name=".player.VideoViewActivity"
+            android:label="VideoView"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".player.IjkplayerActivity"
+            android:label="ijkplayer"
             android:screenOrientation="portrait"/>
 
     </application>

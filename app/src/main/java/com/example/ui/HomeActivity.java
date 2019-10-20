@@ -3,12 +3,12 @@ package com.example.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.orhanobut.logger.Logger;
+import com.example.ui.player.IjkplayerActivity;
+import com.example.ui.player.VideoViewActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -23,11 +23,11 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.photoview_layout,R.id.retrofit_post_layout,R.id.retrofit_get_layout,R.id.btn_tab_top,R.id.loopviewpager_layout,R.id.btn_greendao_layout,R.id.btn_dbflow_layout,R.id.btn_swipebacklayout,R.id.btn_parallaxback, R.id.btn_logger,R.id.btn_tab_recyclerview, R.id.easy_permissions, R.id.constraint_layout,R.id.btn_vector, R.id.btn_circle_indicator, R.id.btn_okhttp, R.id.btn_bubble})
+    @OnClick({R.id.ijkplayer_layout,R.id.photoview_layout,R.id.retrofit_post_layout,R.id.retrofit_get_layout,R.id.btn_tab_top,R.id.loopviewpager_layout,R.id.btn_greendao_layout,R.id.btn_dbflow_layout,R.id.btn_swipebacklayout,R.id.btn_parallaxback, R.id.btn_logger,R.id.btn_tab_recyclerview, R.id.easy_permissions, R.id.constraint_layout,R.id.btn_vector, R.id.btn_circle_indicator, R.id.btn_okhttp, R.id.btn_bubble})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_tab_top:
-                startActivity(new Intent(this, TabLayoutTopActivity.class));
+                startActivity(new Intent(this, VideoViewActivity.class));
                 break;
             case R.id.btn_tab_recyclerview:
                 startActivity(new Intent(this, TablayoutRecyclerViewActivity.class));
@@ -61,8 +61,8 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(this, SwipeBackLayoutActivity.class));
                 break;
             case R.id.btn_dbflow_layout:
-                startActivity(new Intent(this, DBFlowDemoActivity.class));
-                break;
+//                startActivity(new Intent(this, DBFlowDemoActivity.class));
+//                break;
             case R.id.btn_greendao_layout:
                 startActivity(new Intent(this, DBFlowDemoActivity.class));
                 break;
@@ -79,6 +79,9 @@ public class HomeActivity extends AppCompatActivity {
                 ARouter.getInstance().build("/retrofit/post").navigation();
                 break;
 
+            case R.id.ijkplayer_layout:
+                startActivity(new Intent(this, VideoViewActivity.class));
+                break;
 
 
         }

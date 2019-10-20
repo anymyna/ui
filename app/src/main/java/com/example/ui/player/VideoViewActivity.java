@@ -1,4 +1,4 @@
-package com.example.ui;
+package com.example.ui.player;
 
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import com.example.ui.R;
 
 
 public class VideoViewActivity extends AppCompatActivity {

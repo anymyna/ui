@@ -213,6 +213,17 @@
                 android:textAllCaps="false"
                 />
 
+            <Button
+                android:id="@+id/ijkplayer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_40"
+                android:gravity="left|center_vertical"
+                android:layout_alignLeft="@id/retrofit_post_layout"
+                android:layout_below="@id/retrofit_post_layout"
+                android:text="videoview"
+                android:textAllCaps="false"
+                />
+
         </RelativeLayout>
     </ScrollView>
 

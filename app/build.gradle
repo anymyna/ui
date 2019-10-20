@@ -78,7 +78,9 @@ dependencies {
 
     implementation 'com.squareup.retrofit2:retrofit:2.0.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
-
+    implementation project(':ijkplayer-example')
+    implementation project(':ijkplayer-exo')
+    implementation project(':ijkplayer-java')
 
 
 }
