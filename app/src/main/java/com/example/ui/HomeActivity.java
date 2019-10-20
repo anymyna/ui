@@ -7,8 +7,7 @@ import android.view.View;
 
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.example.ui.player.IjkplayerActivity;
-import com.example.ui.player.VideoViewActivity;
+import com.example.ui.media.player.VideoViewActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

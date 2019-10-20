@@ -110,12 +110,12 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".player.VideoViewActivity"
+            android:name=".media.player.VideoViewActivity"
             android:label="VideoView"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".player.IjkplayerActivity"
+            android:name=".media.player.IjkplayerActivity"
             android:label="ijkplayer"
             android:screenOrientation="portrait"/>
 

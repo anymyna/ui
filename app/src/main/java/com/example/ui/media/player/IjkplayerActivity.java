@@ -1,4 +1,4 @@
-package com.example.ui.player;
+package com.example.ui.media.player;
 
 import android.net.Uri;
 import android.os.Bundle;
