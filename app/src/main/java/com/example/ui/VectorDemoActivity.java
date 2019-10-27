@@ -9,6 +9,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 
 @Route(path = "/test/activity")
@@ -27,7 +28,22 @@ public class VectorDemoActivity extends AppCompatActivity {
         decor.setSystemUiVisibility(ui);
         //testQueue();
 
+        //testStack();
 
+
+    }
+
+    private void testStack() {
+        Stack stack=new Stack();
+        //1.empty()栈是否为空
+        System.out.println(stack.empty());
+        //2.peek()栈顶值    3.进栈push()
+        stack.push(new Integer(1));
+        stack.push("b");
+        System.out.println(stack.peek());
+        //4.pop()出栈
+        stack.pop();
+        System.out.println(stack.peek());
     }
 
     private void testQueue() {
