@@ -32,4 +32,13 @@
         android:layout_height="wrap_content"
         />
 
+
+    <ImageView
+        android:id="@+id/big_img"
+        android:layout_alignLeft="@id/btn_get"
+        android:layout_below="@id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
 </RelativeLayout>

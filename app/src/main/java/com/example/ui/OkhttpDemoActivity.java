@@ -1,6 +1,7 @@
 package com.example.ui;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -30,11 +31,24 @@ public class OkhttpDemoActivity extends AppCompatActivity {
     @Bind(R.id.img)
     ImageView img;
 
+
+    @Bind(R.id.big_img)
+    ImageView bigImg;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_okhttp_demo);
         ButterKnife.bind(this);
+
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        //options.inJustDecodeBounds = true;
+        options.inSampleSize = 4;
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.sugar, options);
+        bigImg.setImageBitmap(bitmap);
+        //bigImg.setBackgroundResource(R.drawable.sugar);
 
         OkHttpUtils
                 .get()//
