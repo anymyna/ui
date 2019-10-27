@@ -7,9 +7,11 @@ import android.view.WindowManager;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.Vector;
 
 
 @Route(path = "/test/activity")
@@ -31,6 +33,22 @@ public class VectorDemoActivity extends AppCompatActivity {
         //testStack();
 
 
+        //testVector();
+
+    }
+
+    private void testVector() {
+        Vector<String> hs = new Vector<String>();
+        hs.add("aa");
+        hs.add("bb");
+        hs.add("aa");
+        hs.add("cc");
+        hs.add("aa");
+        hs.add("dd");
+        Iterator iterator = hs.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 
     private void testStack() {
