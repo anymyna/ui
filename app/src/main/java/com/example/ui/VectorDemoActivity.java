@@ -7,6 +7,9 @@ import android.view.WindowManager;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 
 @Route(path = "/test/activity")
 public class VectorDemoActivity extends AppCompatActivity {
@@ -22,7 +25,37 @@ public class VectorDemoActivity extends AppCompatActivity {
         ui |=View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR; //设置状态栏中字体的颜色为黑色
         //ui &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR; //设置状态栏中字体颜色为白色
         decor.setSystemUiVisibility(ui);
+        //testQueue();
 
+
+    }
+
+    private void testQueue() {
+        //队列（Queue）用法
+        Queue<String> queue = new LinkedList<String>();
+        queue.offer("a");
+        queue.offer("b");
+        queue.offer("c");
+        queue.offer("d");
+        queue.offer("e");
+        for(String q : queue){
+            System.out.println(q);
+        }
+        System.out.println("===");
+        System.out.println("poll="+queue.poll()); //返回第一个元素，并在队列中删除
+        for(String q : queue){
+            System.out.println(q);
+        }
+        System.out.println("===");
+        System.out.println("element="+queue.element()); //返回第一个元素
+        for(String q : queue){
+            System.out.println(q);
+        }
+        System.out.println("===");
+        System.out.println("peek="+queue.peek()); //返回第一个元素
+        for(String q : queue){
+            System.out.println(q);
+        }
     }
 
 }
